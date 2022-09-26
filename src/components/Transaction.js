@@ -1,6 +1,6 @@
 import React from "react";
 
-function Transaction(transaction) {
+function Transaction (transaction) {
   return (
     <tr>
       <td>{"your code here..."}</td>

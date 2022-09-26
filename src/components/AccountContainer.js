@@ -6,11 +6,11 @@ import AddTransactionForm from "./AddTransactionForm";
 
 function AccountContainer() {
   const [transactions, settransactions]=React.useState([]);
-  useEffect(()=>{
+  useEffect(() => {
     fetch("http://localhost:8001/transactions")
       .then(resp=>resp.json())
       .then(result=> settransactions (result));
-  },[]);
+  },[])
   
   // console.log(result);
   return (

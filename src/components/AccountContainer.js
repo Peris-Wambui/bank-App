@@ -12,18 +12,18 @@ function AccountContainer() {
       .then(result=> 
         {settransactions (result)
       });
-  },[])
+  },[]);
   
   // console.log(result);
 
-  function handleSubmit(obj){
-    settransactions(transactions =>[...transactions,obj]);
+  function handleSubmit(newTransactions){
+    settransactions(transactions =>[...transactions ,newTransactions]);
     fetch ("http://localhost:8001/transactions",{
       method:"POST",
       Headers:{
         'content-Type':'application/json',
       },
-      body:JSON.stringify(obj),
+      body:JSON.stringify(newTransactions),
     })
     .then((resp)=>resp.json())
     .then(newTrans =>settransactions
@@ -33,7 +33,7 @@ function AccountContainer() {
     <div>
       <Search />
       <AddTransactionForm 
-        submit ={handleSubmit}
+        onSubmit ={handleSubmit}
       />
       <TransactionsList  
         transactions={transactions}

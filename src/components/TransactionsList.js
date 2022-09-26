@@ -3,9 +3,9 @@ import Transaction from "./Transaction";
 
 function TransactionsList( { transactions }) {
   // console.log(transactions);
-  let transactionResults = transactions.map(transaction=> <Transaction key={transaction.id} transaction=
-    {transaction}
-    />)
+  // let transactionResults = transactions.map(transaction=> <Transaction key={transaction.id} transaction=
+  //   {transaction}
+    // />)
   return (
     <table className="ui celled striped padded table">
       <tbody>
@@ -24,7 +24,13 @@ function TransactionsList( { transactions }) {
           </th>
         </tr>
         {/* render a list of <Transaction> components here */}
-       { transactionResults}
+       {/* { transactionResults} */}
+     {transactions.map(transaction=> <Transaction 
+          key={transaction.id} 
+          
+          transaction={transaction}  
+    />
+    )}
       </tbody>
     </table>
   );

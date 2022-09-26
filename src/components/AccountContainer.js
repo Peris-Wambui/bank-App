@@ -13,10 +13,16 @@ function AccountContainer() {
   },[])
   
   // console.log(result);
+
+  function handleSubmit(obj){
+
+  }
   return (
     <div>
       <Search />
-      <AddTransactionForm />
+      <AddTransactionForm 
+        submit ={handleSubmit}
+      />
       <TransactionsList  
         transactions={transactions}
       />

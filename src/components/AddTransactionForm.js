@@ -6,7 +6,8 @@ function AddTransactionForm({submit}) {
   function handleChange(e){
     e.preventDefult();
     setFormTrans({
-    ...formData,
+    ...formTrans,
+    [e.target.name]:[e.target.value]
   });}
   function getSubmitTrans(e){
     e.preventDefult();

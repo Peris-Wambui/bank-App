@@ -15,7 +15,17 @@ function AccountContainer() {
   // console.log(result);
 
   function handleSubmit(obj){
-
+    settransactions(transactions =>[...transactions,obj]);
+    fetch ("http://localhost:8001/transactions",{
+      method:"POST",
+      Headers:{
+        'content-Type':'application/json',
+      },
+      body:JSON.stringify(obj),
+    })
+    .then((resp)=>resp.json())
+    .then(newTrans =>settransactions
+      ((transactions)=>[...transactions,newTrans]))
   }
   return (
     <div>

@@ -2,6 +2,8 @@ import React from "react";
 import Transaction from "./Transaction";
 
 function TransactionsList( {transactions}) {
+  // console.log(transactions);
+  transactions.map(transaction=><Transaction transaction={transaction}/>);
   return (
     <table className="ui celled striped padded table">
       <tbody>

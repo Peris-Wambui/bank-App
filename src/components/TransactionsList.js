@@ -3,7 +3,7 @@ import Transaction from "./Transaction";
 
 function TransactionsList( { transactions }) {
   // console.log(transactions);
-  let transactionRows = transactions.map(transaction=> <Transaction transaction=
+  let transactionResults = transactions.map(transaction=> <Transaction transaction=
     {transaction}
     />)
   return (
@@ -24,7 +24,7 @@ function TransactionsList( { transactions }) {
           </th>
         </tr>
         {/* render a list of <Transaction> components here */}
-       { transactionRows}
+       { transactionResults}
       </tbody>
     </table>
   );

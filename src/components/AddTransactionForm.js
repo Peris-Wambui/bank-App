@@ -4,13 +4,13 @@ function AddTransactionForm({submit}) {
 
   const[formTrans,setFormTrans]= useState([])
   function handleChange(e){
-    e.preventDefult();
+    e.preventDefault();
     setFormTrans({
     ...formTrans,
     [e.target.name]:[e.target.value]
   });}
   function getSubmitTrans(e){
-    e.preventDefult();
+    e.preventDefault();
 
     // submit()
   }

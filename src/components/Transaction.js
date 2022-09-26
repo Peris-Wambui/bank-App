@@ -1,7 +1,7 @@
 import React from "react";
 
-function Transaction ({transactionObj}) {
-  const {date,description, category, amount} = transactionObj;
+function Transaction ({transaction}) {
+  const {date,description, category, amount} = transaction;
   return (
     <tr>
       <td>{date}</td>

@@ -3,8 +3,8 @@ import Transaction from "./Transaction";
 
 function TransactionsList( { transactions }) {
   // console.log(transactions);
-  let transactionResults = transactions.map(transactionObj=> <Transaction key={transactionObj.id} transactionObj=
-    {transactionObj}
+  let transactionResults = transactions.map(transaction=> <Transaction key={transaction.id} transaction=
+    {transaction}
     />)
   return (
     <table className="ui celled striped padded table">

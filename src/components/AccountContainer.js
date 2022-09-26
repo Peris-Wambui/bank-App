@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import TransactionsList from "./TransactionsList";
 import Search from "./Search";
 import AddTransactionForm from "./AddTransactionForm";
 // import { useState } from "react/cjs/react.production.min";
 
 function AccountContainer() {
-  const [transactions, settransactions]=React.useState([]);
+  const [transactions, settransactions]= useState([]);
   useEffect(() => {
     fetch("http://localhost:8001/transactions")
       .then(resp=>resp.json())

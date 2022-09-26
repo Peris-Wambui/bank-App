@@ -31,7 +31,7 @@ function AddTransactionForm({onSubmit}) {
   }
   return (
     <div className="ui segment">
-      <form onSubmit={getSubmitTrans} className="ui form" >
+      <form onSubmit={getSubmitTrans} onChange={handleChange} className="ui form" >
         <div className="inline fields">
           <input type="date" name="date"
           value={formTrans.date} 
@@ -56,7 +56,7 @@ function AddTransactionForm({onSubmit}) {
            placeholder="Amount" step="0.01"
             />
         </div>
-        <button className="ui button" type="submit" >
+        <button className="ui button" type="submit" onSubmit={getSubmitTrans} >
           Add Transaction
         </button>
       </form>

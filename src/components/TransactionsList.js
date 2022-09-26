@@ -25,12 +25,21 @@ function TransactionsList( { transactions }) {
         </tr>
         {/* render a list of <Transaction> components here */}
        {/* { transactionResults} */}
-     {transactions.map(transaction=> <Transaction 
+     {transactions.map(transaction=> {
+      return(
+        <Transaction 
           key={transaction.id} 
+          date={transaction.date} 
+          description={transaction.description} 
+          category={transaction.category} 
+          amount={transaction.amount} 
+          
           
           transaction={transaction}  
-    />
-    )}
+        />
+
+      );
+    })}
       </tbody>
     </table>
   );

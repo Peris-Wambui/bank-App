@@ -29,9 +29,15 @@ function AccountContainer() {
     .then(newTrans =>settransactions
       ((transactions)=>[...transactions,newTrans]))
   }
+  function handleOnSearch(search){
+    settransactions(transactions=>transactions.filter( 
+      transaction => transaction.description.includes(search)
+    ))
+  }
+
   return (
     <div>
-      <Search />
+      <Search onSearch={handleOnSearch}/>
       <AddTransactionForm 
         onSubmit ={handleSubmit}
       />

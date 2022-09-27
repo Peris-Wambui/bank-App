@@ -25,7 +25,7 @@ function TransactionsList( { transactions }) {
         </tr>
         {/* render a list of <Transaction> components here */}
        {/* { transactionResults} */}
-     {transactions.map(transaction=> {
+     {transactions.map((transaction)=> {
       return(
         <Transaction 
           key={transaction.id} 

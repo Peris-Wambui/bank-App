@@ -2,8 +2,10 @@ import React from "react";
 
 function Transaction ({transaction}) {
   const { date,description, category, amount} = transaction;
+  // transaction={transaction};
   return (
-    <tr>
+
+    <tr> 
       <td>{date}</td>
       <td>{description}</td>
       <td>{category}</td>
